@@ -25,7 +25,7 @@ public class ProductDaoImpl implements ProductDao {
             preparedStatement.setString(1, product.getProductName());
             preparedStatement.setString(2, product.getProductCode());
             preparedStatement.setBoolean(3, product.getIsDeleted());
-            preparedStatement.setDate(4, product.getImportDated());
+            preparedStatement.setDate(4, product.getImportedDate());
             preparedStatement.setDate(5,product.getExpiredDate());
             preparedStatement.setString(6, product.getDescription());
             int rowAffected = preparedStatement.executeUpdate();
@@ -132,7 +132,7 @@ public class ProductDaoImpl implements ProductDao {
                         .productName(resultSet.getString("product_name"))
                         .productCode(resultSet.getString("product_code"))
                         .isDeleted(resultSet.getBoolean("is_deleted"))
-                        .importDated(resultSet.getDate("imported_at"))
+                        .importedDate(resultSet.getDate("imported_at"))
                         .expiredDate(resultSet.getDate("expired_at"))
                         .description(resultSet.getString("product_description"))
                         .build();

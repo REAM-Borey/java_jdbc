@@ -1,4 +1,9 @@
 package model.service;
 
-public class OrderService {
+import model.entity.Orders;
+
+public interface OrderService {
+    Orders AddOrder();
+    Orders UpdateOrder();
+    Orders DeleteOrder();
 }
